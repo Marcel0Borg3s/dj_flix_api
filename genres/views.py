@@ -3,7 +3,8 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import get_object_or_404
 from genres.models import Genre
- 
+from rest_framework import generics
+
 
 @csrf_exempt
 def genre_create_list_view(request):
@@ -35,3 +36,4 @@ def genre_detail_view(request, pk):
         genre.delete()
         return JsonResponse({'message': 'Genre deleted successfully'}, status=204)          
         
+
