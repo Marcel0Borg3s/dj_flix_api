@@ -12,4 +12,3 @@ class GenreRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = GenreSerializer
 
 
-
