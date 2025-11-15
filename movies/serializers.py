@@ -16,18 +16,15 @@ class MovieSerializer(serializers.ModelSerializer):
 
         if rate:
             return round(rate, 1)
-        
+
         return "No reviews yet"
-    
 
     def validate_release_date(self, value):
         if value.year < 1990:
             raise serializers.ValidationError("Release date must be 1990 or later.")
         return value
+
     def validate_resume(self, value):
         if len(value) > 200:
             raise serializers.ValidationError("Resume must not exceed 200 characters.")
         return value
-    
-
-
