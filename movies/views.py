@@ -14,7 +14,7 @@ class MovieCreateListView(generics.ListCreateAPIView):
     def get_serializer_class(self):
         if self.request.method == 'GET':
             return MovieListDetailSerializer
-        return MovieSerializer 
+        return MovieSerializer
 
 
 class MovieRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
